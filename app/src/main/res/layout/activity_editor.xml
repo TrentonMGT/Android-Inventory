@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/update_photo_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_margin"
+            android:layout_marginStart="@dimen/activity_margin"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:text="@string/click_photo_to_update"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/image_product_photo"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginLeft="@dimen/activity_margin"
+            android:layout_marginStart="@dimen/activity_margin"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/update_photo_label" />
+
+        <TextView
+            android:id="@+id/name_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:text="@string/product_name" />
+
+        <EditText
+            android:id="@+id/inventory_item_name_edittext"
+            style="@style/EditorFieldStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/product_name"
+            android:inputType="textCapWords"
+            android:maxLines="1"
+            tools:text="Product Name" />
+
+        <TextView
+            android:id="@+id/descriptionLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:text="@string/product_description" />
+
+        <EditText
+            android:id="@+id/inventory_item_description_edittext"
+            style="@style/EditorFieldStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/product_description"
+            android:inputType="textMultiLine"
+            android:maxLength="30"
+            android:maxLines="4"
+            tools:text="@string/product_description" />
+
+        <TextView
+            android:id="@+id/priceLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:text="@string/set_product_price" />
+
+        <EditText
+            android:id="@+id/inventory_item_price_edittext"
+            style="@style/EditorFieldStyle"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:contentDescription="@string/set_product_price"
+            android:inputType="numberDecimal"
+            tools:text="$34" />
+
+        <TextView
+            android:id="@+id/inventoryLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:text="@string/set_inventory" />
+
+        <EditText
+            android:id="@+id/inventory_item_current_quantity_edittext"
+            style="@style/EditorFieldStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/set_inventory"
+            android:inputType="number"
+            android:maxLines="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_product_photo"
+            tools:text="3" />
+
+        <Button
+            android:id="@+id/btn_increase_inventory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/increase_inventory" />
+
+        <Button
+            android:id="@+id/btn_decrease_inventory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/decrease_inventory" />
+
+        <TextView
+            android:id="@+id/salesLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:text="@string/set_product_sales" />
+
+        <EditText
+            android:id="@+id/current_sales_edittext"
+            style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/set_product_sales"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLines="1"
+            android:text="0"
+            tools:text="33" />
+
+        <TextView
+            android:id="@+id/lable_supplier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:text="@string/set_supplier"
+            app:layout_constraintLeft_toLeftOf="@+id/suplier_edittext" />
+
+        <EditText
+            android:id="@+id/suplier_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/set_supplier"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:maxLines="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/activity_margin"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/order_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/order_more" />
+
+                <ImageButton
+                    android:id="@+id/order_supplier_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@mipmap/ic_launcher" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_margin"
+                android:layout_marginRight="@dimen/activity_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/update_save_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/update" />
+
+                <ImageButton
+                    android:id="@+id/save_product_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:tint="@android:color/holo_green_dark"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:srcCompat="@mipmap/ic_launcher" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/delete_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Delete Product" />
+
+                <ImageButton
+                    android:id="@+id/delete_product_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill_horizontal"
+                    android:tint="@android:color/holo_red_dark"
+                    app:srcCompat="@mipmap/ic_launcher" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
